@@ -12,6 +12,101 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #2e3d49;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+
+    /* Album */
+    .album {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+
+    /* Item do álbum (card) */
+    .item-album {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .item-album img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #eee;
+    }
+
+    .item-album h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .item-album p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 20px;
+    }
+
+    /* Efeito de hover */
+    .item-album:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .album {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .item-album h2 {
+        font-size: 1.2rem;
+      }
+
+      .item-album p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -22,29 +117,29 @@
 
   <div class="album">
     <div class="item-album">
-      <img src="./images/" alt="">
-      <h2></h2>
-      <p>Poderes: </p>
+      <img src="./images/Robin.jpg" alt="Robin">
+      <h2>Robin</h2>
+      <p>Poderes: Uso de bastão e habilidades de combate.</p>
     </div>
     <div class="item-album">
-      <img src="./images/" alt="">
-      <h2></h2>
-      <p>Poderes: </p>
+      <img src="./images/Estelar.jpg" alt="Estelar">
+      <h2>Estelar</h2>
+      <p>Poderes: Voo, laser e proteção de energia</p>
     </div>
     <div class="item-album">
-      <img src="./images/" alt="">
-      <h2></h2>
-      <p>Poderes: </p>
+      <img src="./images/Ravena.jpg" alt="Ravena">
+      <h2>Ravena Supreme</h2>
+      <p>Poderes: Magia das trevas, controle de suas emoções a partir da meditação</p>
     </div>
     <div class="item-album">
-      <img src="./images/" alt="">
-      <h2></h2>
-      <p>Poderes: </p>
+      <img src="./images/Mutano.jpg" alt="Mutano">
+      <h2>Mutano</h2>
+      <p>Poderes: Transformação em qualquer animal</p>
     </div>
     <div class="item-album">
-      <img src="./images/" alt="">
-      <h2></h2>
-      <p>Poderes: </p>
+      <img src="./images/Cyborg.png" alt="Cyborg">
+      <h2>Cyborg</h2>
+      <p>Poderes: Força e habilidades tecnológicas</p>
     </div>
   </div>
 </body>
