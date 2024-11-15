@@ -1,0 +1,41 @@
+
+.item-album.robin {
+    border: 2px solid #ff0000;
+  }
+  
+  .item-album.robin h2 {
+    color: #ff0000;
+  }
+  
+  .item-album.estelar {
+    border: 2px solid #ff69b4; 
+  }
+  
+  .item-album.estelar h2 {
+    color: #ff69b4; 
+  }
+  
+  .item-album.ravena {
+    border: 2px solid #800080; 
+  }
+  
+  .item-album.ravena h2 {
+    color: #800080; 
+  }
+  
+  .item-album.mutano {
+    border: 2px solid #00ff00; 
+  }
+  
+  .item-album.mutano h2 {
+    color: #00ff00; 
+  }
+  
+  .item-album.cyborg {
+    border: 2px solid #00bfff; 
+  }
+  
+  .item-album.cyborg h2 {
+    color: #00bfff; 
+  }
+  

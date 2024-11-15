@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="./css/cardItem.css">
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,7 +19,6 @@
       padding: 0;
     }
 
-    /* Header */
     header {
       background-color: #2e3d49;
       color: white;
@@ -38,7 +37,6 @@
       font-size: 1.2rem;
     }
 
-    /* Album */
     .album {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -47,7 +45,6 @@
       justify-items: center;
     }
 
-    /* Item do álbum (card) */
     .item-album {
       background-color: white;
       border-radius: 10px;
@@ -57,6 +54,7 @@
       width: 100%;
       max-width: 300px;
       text-align: center;
+      animation: fadeInUp 0.5s ease;
     }
 
     .item-album img {
@@ -76,13 +74,11 @@
       margin: 0 0 20px;
     }
 
-    /* Efeito de hover */
     .item-album:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    /* Responsividade */
     @media (max-width: 768px) {
       .album {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -108,6 +104,7 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
   <header>
@@ -116,27 +113,27 @@
   </header>
 
   <div class="album">
-    <div class="item-album">
+    <div class="item-album robin">
       <img src="./images/Robin.jpg" alt="Robin">
       <h2>Robin</h2>
       <p>Poderes: Uso de bastão e habilidades de combate.</p>
     </div>
-    <div class="item-album">
+    <div class="item-album estelar">
       <img src="./images/Estelar.jpg" alt="Estelar">
       <h2>Estelar</h2>
       <p>Poderes: Voo, laser e proteção de energia</p>
     </div>
-    <div class="item-album">
+    <div class="item-album ravena">
       <img src="./images/Ravena.jpg" alt="Ravena">
       <h2>Ravena Supreme</h2>
       <p>Poderes: Magia das trevas, controle de suas emoções a partir da meditação</p>
     </div>
-    <div class="item-album">
+    <div class="item-album mutano">
       <img src="./images/Mutano.jpg" alt="Mutano">
       <h2>Mutano</h2>
       <p>Poderes: Transformação em qualquer animal</p>
     </div>
-    <div class="item-album">
+    <div class="item-album cyborg">
       <img src="./images/Cyborg.png" alt="Cyborg">
       <h2>Cyborg</h2>
       <p>Poderes: Força e habilidades tecnológicas</p>
