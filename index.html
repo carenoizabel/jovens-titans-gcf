@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./css/cardItem.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -78,6 +79,62 @@
       transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
+    .item-album h2 i {
+  margin-left: 10px;
+  color: #666;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.item-album:hover h2 i {
+  transform: rotate(360deg) scale(1.2);
+  color: #0078d7;
+}
+
+
+    .logo img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1); 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #c5c6c7;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #66fcf1; 
+  border-bottom: 2px solid #66fcf1;
+  padding-bottom: 0.2rem;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background-color: #66fcf1;
+  height: 4px;
+  width: 25px;
+  border-radius: 5px;
+}
+
 
     @media (max-width: 768px) {
       .album {
@@ -94,6 +151,96 @@
       }
     }
 
+    .footer {
+  background-color: #1f2833;
+  padding: 15px;
+  text-align: center;
+  color: #c5c6c7;
+  border-top: 2px solid #66fcf1;
+}
+
+@keyframes swing-baton {
+  0%, 100% { transform: rotate(0); }
+  50% { transform: rotate(20deg); }
+}
+
+.menu-toggle:hover span {
+  background-color: #45a29e;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+@keyframes fly-up {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shadow-wave {
+  0% { filter: brightness(1); transform: scale(1); }
+  50% { filter: brightness(0.5); transform: scale(1.1); }
+  100% { filter: brightness(1); transform: scale(1); }
+}
+
+@keyframes animal-morph {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tech-pulse {
+  0% { box-shadow: 0 0 10px #66fcf1; }
+  50% { box-shadow: 0 0 20px #66fcf1; }
+  100% { box-shadow: 0 0 10px #66fcf1; }
+}
+
+@keyframes earth-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-3px); }
+}
+
+@keyframes speed-blur {
+  0% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(10px); opacity: 0.7; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.robin:hover {
+  animation: swing-baton 1s ease-in-out;
+}
+
+.estelar:hover {
+  animation: fly-up 1.2s ease-in-out;
+}
+
+.ravena:hover {
+  animation: shadow-wave 1.5s ease-in-out;
+}
+
+.mutano:hover {
+  animation: animal-morph 1.5s infinite alternate;
+}
+
+.cyborg:hover {
+  animation: tech-pulse 1.5s ease-in-out;
+}
+
+.terra:hover {
+  animation: earth-shake 1s ease-in-out;
+}
+
+.kid-flash:hover {
+  animation: speed-blur 0.8s infinite alternate;
+}
+
+
     @media (max-width: 480px) {
       .item-album h2 {
         font-size: 1.2rem;
@@ -103,6 +250,83 @@
         font-size: 0.9rem;
       }
     }
+
+    .jinx:hover {
+  animation: jinx-curse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes jinx-curse {
+  0% { filter: hue-rotate(0); transform: rotate(0); }
+  50% { filter: hue-rotate(120deg); transform: rotate(-5deg); }
+  100% { filter: hue-rotate(0); transform: rotate(0); }
+}
+
+.aqualad:hover {
+  animation: water-wave 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes water-wave {
+  0% { transform: scale(1); box-shadow: 0 0 10px #00bcd4; }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px #00e5ff; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #00bcd4; }
+}
+
+.ravager:hover {
+  animation: sword-slash 1s infinite;
+}
+
+@keyframes sword-slash {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-10px) rotate(5deg); }
+}
+
+.superboy:hover {
+  animation: hero-landing 1.5s ease-in-out;
+}
+
+@keyframes hero-landing {
+  0% { transform: translateY(-20px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.wonder-girl:hover {
+  animation: amazon-spin 1.5s ease-in-out infinite;
+}
+
+@keyframes amazon-spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.speedy:hover {
+  animation: arrow-shot 1.5s ease-in-out;
+}
+
+@keyframes arrow-shot {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(15px); }
+  100% { transform: translateX(0); }
+}
+
+.blue-beetle:hover {
+  animation: alien-tech 1.5s infinite;
+}
+
+@keyframes alien-tech {
+  0%, 100% { box-shadow: 0 0 10px #00ff00; }
+  50% { box-shadow: 0 0 20px #00ff00; }
+}
+
+.ravenous:hover {
+  animation: dark-energy 1.5s infinite alternate;
+}
+
+@keyframes dark-energy {
+  0% { filter: brightness(0.8); transform: scale(1); }
+  50% { filter: brightness(0.5); transform: scale(1.1); }
+  100% { filter: brightness(0.8); transform: scale(1); }
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
@@ -112,43 +336,105 @@
       <div class="logo">
         <img src="./images/logojt.png" alt="Logo Jovens Titãs">
       </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Sobre</a></li>
         <li><a href="#collection">Coleção</a></li>
         <li><a href="#contact">Contato</a></li>
       </ul>
-    <h1>Álbum de Figurinhas dos Jovens Titãs</h1>
-    <p>Uma página dedicada para os colecionadores</p>
     </nav>
+    <div>
+      <h1>Álbum de Figurinhas dos Jovens Titãs</h1>
+    <p>Uma página dedicada para os colecionadores</p>
+    </div>
   </header>
 
   <div class="album">
     <div class="item-album robin">
       <img src="./images/Robin.jpg" alt="Robin">
-      <h2>Robin</h2>
-      <p>Poderes: Uso de bastão e habilidades de combate.</p>
+      <h2>Robin <i class="fas fa-user-ninja"></i></h2>      <p>Poderes: Uso de bastão e habilidades de combate.</p>
     </div>
     <div class="item-album estelar">
       <img src="./images/Estelar.jpg" alt="Estelar">
-      <h2>Estelar</h2>
-      <p>Poderes: Voo, laser e proteção de energia</p>
+      <h2>Estelar <i class="fas fa-bolt"></i></h2>      <p>Poderes: Voo, laser e proteção de energia</p>
     </div>
     <div class="item-album ravena">
       <img src="./images/Ravena.jpg" alt="Ravena">
-      <h2>Ravena Supreme</h2>
-      <p>Poderes: Magia das trevas, controle de suas emoções a partir da meditação</p>
+      <h2>Ravena Supreme<i class="fas fa-magic"></i></h2>      <p>Poderes: Magia das trevas, controle de suas emoções a partir da meditação</p>
     </div>
     <div class="item-album mutano">
       <img src="./images/Mutano.jpg" alt="Mutano">
-      <h2>Mutano</h2>
-      <p>Poderes: Transformação em qualquer animal</p>
+      <h2>Mutano <i class="fas fa-paw"></i></h2>      <p>Poderes: Transformação em qualquer animal</p>
     </div>
     <div class="item-album cyborg">
       <img src="./images/Cyborg.png" alt="Cyborg">
-      <h2>Cyborg</h2>
-      <p>Poderes: Força e habilidades tecnológicas</p>
+      <h2>Cyborg <i class="fas fa-robot"></i></h2>      <p>Poderes: Força e habilidades tecnológicas</p>
+    </div>
+    <div class="item-album terra">
+      <img src="./images/Terra.png" alt="Terra">
+      <h2>Terra</h2>
+      <p>Poderes: Controle de terra e pedras.</p>
+    </div>
+    <div class="item-album kid-flash">
+      <img src="./images/KidFlash.png" alt="Kid Flash">
+      <h2>Kid Flash</h2>
+      <p>Poderes: Supervelocidade.</p>
+    </div>
+    <div class="item-album jinx">
+      <img src="./images/Jinx.png" alt="Jinx">
+      <h2>Jinx</h2>
+      <p>Poderes: Controle de má sorte e manipulação de energia.</p>
+    </div>
+    <div class="item-album aqualad">
+      <img src="./images/Aqualad.png" alt="Aqualad">
+      <h2>Aqualad</h2>
+      <p>Poderes: Controle da água e combate subaquático.</p>
+    </div>
+    <div class="item-album ravager">
+      <img src="./images/Ravager.png" alt="Ravager">
+      <h2>Ravager</h2>
+      <p>Poderes: Espadas duplas e combate corpo a corpo.</p>
+    </div>
+    <div class="item-album superboy">
+      <img src="./images/Superboy.png" alt="Superboy">
+      <h2>Superboy</h2>
+      <p>Poderes: Superforça, voo e resistência sobre-humana.</p>
+    </div>
+    <div class="item-album wonder-girl">
+      <img src="./images/WonderGirl.png" alt="Wonder Girl">
+      <h2>Wonder Girl</h2>
+      <p>Poderes: Superforça e habilidades de guerreira amazona.</p>
+    </div>
+    <div class="item-album speedy">
+      <img src="./images/Speedy.png" alt="Speedy">
+      <h2>Speedy</h2>
+      <p>Poderes: Arqueiro especialista e habilidades de combate.</p>
+    </div>
+    <div class="item-album blue-beetle">
+      <img src="./images/BlueBeetle.png" alt="Blue Beetle">
+      <h2>Blue Beetle</h2>
+      <p>Poderes: Armadura alienígena e tecnologia avançada.</p>
+    </div>
+    <div class="item-album ravenous">
+      <img src="./images/Ravenous.png" alt="Ravenous">
+      <h2>Ravenous</h2>
+      <p>Poderes: Energia mística e manipulação de escuridão.</p>
     </div>
   </div>
+  <footer class="footer">
+    <p>&copy; 2024 Album Jovens Titãs. Todos os direitos reservados.</p>
+  </footer>
 </body>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
 </html>

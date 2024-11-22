@@ -38,4 +38,82 @@
   .item-album.cyborg h2 {
     color: #00bfff; 
   }
+
+  .item-album.terra {
+    border: 2px solid #fff700; 
+  }
   
+  .item-album.terra h2 {
+    color: #fff700; 
+  }
+  
+  .item-album.kid-flash {
+    border: 2px solid #821210; 
+  }
+  
+  .item-album.kid-flash h2 {
+    color: #821210; 
+  }
+  .item-album.jinx {
+    border: 2px solid #ee82ee; 
+  }
+  
+  .item-album.jinx h2 {
+    color: #ee82ee;
+  }
+  
+  .item-album.aqualad {
+    border: 2px solid #00ffff;
+  }
+  
+  .item-album.aqualad h2 {
+    color: #00ffff;
+  }
+  
+  .item-album.ravager {
+    border: 2px solid #ff4500; 
+  }
+  
+  .item-album.ravager h2 {
+    color: #ff4500;
+  }
+  
+  .item-album.superboy {
+    border: 2px solid #4169e1; 
+  }
+  
+  .item-album.superboy h2 {
+    color: #4169e1;
+  }
+  
+  .item-album.wonder-girl {
+    border: 2px solid #daa520; 
+  }
+  
+  .item-album.wonder-girl h2 {
+    color: #daa520;
+  }
+  
+  .item-album.speedy {
+    border: 2px solid #b22222; 
+  }
+  
+  .item-album.speedy h2 {
+    color: #b22222;
+  }
+  
+  .item-album.blue-beetle {
+    border: 2px solid #1e90ff; 
+  }
+  
+  .item-album.blue-beetle h2 {
+    color: #1e90ff;
+  }
+  
+  .item-album.ravenous {
+    border: 2px solid #4b0082; 
+  }
+  
+  .item-album.ravenous h2 {
+    color: #4b0082;
+  }
